@@ -4,12 +4,19 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "start:trace": "node -r ./tracing.js app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@opentelemetry/core": "^0.22.0",
+    "@opentelemetry/exporter-jaeger": "^0.22.0",
+    "@opentelemetry/instrumentation": "^0.22.0",
+    "@opentelemetry/instrumentation-http": "^0.22.0",
+    "@opentelemetry/node": "^0.22.0",
+    "@opentelemetry/tracing": "^0.22.0",
     "axios": "^0.21.1",
     "express": "^4.17.1"
   }

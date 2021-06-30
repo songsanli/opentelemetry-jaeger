@@ -9,10 +9,10 @@ app.get("/", (req, res) => {
   axios
     .get(`http://localhost:${PORT}/middle-tier`)
     .then(() => axios.get(`http://localhost:${PORT}/middle-tier`))
-    .then(result => {
+    .then((result) => {
       res.send(result.data);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
       res.status(500).send();
     });
@@ -22,10 +22,10 @@ app.get("/middle-tier", (req, res) => {
   axios
     .get(`http://localhost:${PORT}/backend`)
     .then(() => axios.get(`http://localhost:${PORT}/backend`))
-    .then(result => {
+    .then((result) => {
       res.send(result.data);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
       res.status(500).send();
     });
